@@ -1,11 +1,31 @@
 [
   {
     "inputs": [
-      { "internalType": "string", "name": "_idCertificado", "type": "string" },
-      { "internalType": "string", "name": "_nombreEstudiante", "type": "string" },
-      { "internalType": "string", "name": "_nombreCurso", "type": "string" },
-      { "internalType": "string", "name": "_fechaEmision", "type": "string" },
-      { "internalType": "address", "name": "_walletEstudiante", "type": "address" }
+      {
+        "internalType": "string",
+        "name": "_idCertificado",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "_nombreEstudiante",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "_nombreCurso",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "_fechaEmision",
+        "type": "string"
+      },
+      {
+        "internalType": "address",
+        "name": "_walletEstudiante",
+        "type": "address"
+      }
     ],
     "name": "registrarCertificado",
     "outputs": [],
@@ -14,40 +34,116 @@
   },
   {
     "inputs": [
-      { "internalType": "string", "name": "_idCertificado", "type": "string" }
+      {
+        "internalType": "string",
+        "name": "_idCertificado",
+        "type": "string"
+      }
     ],
     "name": "consultarCertificado",
     "outputs": [
-      { "internalType": "string", "name": "nombreEstudiante", "type": "string" },
-      { "internalType": "string", "name": "nombreCurso", "type": "string" },
-      { "internalType": "string", "name": "fechaEmision", "type": "string" },
-      { "internalType": "address", "name": "walletEstudiante", "type": "address" },
-      { "internalType": "bool", "name": "valido", "type": "bool" }
+      {
+        "internalType": "string",
+        "name": "nombreEstudiante",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "nombreCurso",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "fechaEmision",
+        "type": "string"
+      },
+      {
+        "internalType": "address",
+        "name": "walletEstudiante",
+        "type": "address"
+      },
+      {
+        "internalType": "bool",
+        "name": "valido",
+        "type": "bool"
+      }
     ],
     "stateMutability": "view",
     "type": "function"
   },
   {
     "inputs": [
-      { "internalType": "string", "name": "_idCertificado", "type": "string" }
+      {
+        "internalType": "string",
+        "name": "_idCertificado",
+        "type": "string"
+      }
     ],
     "name": "existeCertificado",
     "outputs": [
-      { "internalType": "bool", "name": "", "type": "bool" }
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
     ],
     "stateMutability": "view",
     "type": "function"
   },
   {
     "inputs": [
-      { "internalType": "string", "name": "_idCertificado", "type": "string" },
-      { "internalType": "address", "name": "_walletEstudiante", "type": "address" }
+      {
+        "internalType": "string",
+        "name": "_idCertificado",
+        "type": "string"
+      },
+      {
+        "internalType": "address",
+        "name": "_walletEstudiante",
+        "type": "address"
+      }
     ],
     "name": "verificarCertificado",
     "outputs": [
-      { "internalType": "bool", "name": "", "type": "bool" }
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
     ],
     "stateMutability": "view",
     "type": "function"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "string",
+        "name": "idCertificado",
+        "type": "string"
+      },
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "walletEstudiante",
+        "type": "address"
+      }
+    ],
+    "name": "CertificadoRegistrado",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "string",
+        "name": "idCertificado",
+        "type": "string"
+      }
+    ],
+    "name": "CertificadoRevocado",
+    "type": "event"
   }
 ]
